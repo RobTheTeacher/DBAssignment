@@ -28,7 +28,7 @@ const LogInForm = () => {
             {errors.password && <ErrorMessage error={errors.password.message!} />}
             
             <button>{isPending ? "Logging in" : "Log In!"}</button>
-            {error && <ErrorMessage error={error.message}/>}
+            {error && <ErrorMessage error={"Invalid log in credentials"}/>}
          </form>
         </div>
     )
