@@ -16,7 +16,7 @@ const PostPage = async ({ params }: { params: { slug: string } }) => {
     return (
         <div className="pb-10">
             {data &&
-                <div className="border-sushi border p-4 rounded-2xl mt-8 max-w-md m-auto">
+               <> <div className="border-sushi border p-4 rounded-2xl mt-8 max-w-md m-auto">
                     <h1 className="heading">{data.title}</h1>
                     {data.image && <img src={data.image} alt={data.title} />}
                     {data.content && <p>{data.content}</p>}
@@ -28,9 +28,11 @@ const PostPage = async ({ params }: { params: { slug: string } }) => {
                         </div>
                     }
                 </div>
+                <Comments postid={data.id} isAuthor={isAuthor} userId={user ? user.id : null} />
+              </> 
             }
-            <Comments postid={data.id} isAuthor={isAuthor} userId={user ? user.id : null} />
-            {user && <AddComment postId={data.id} />}
+             {user && <AddComment postId={data!.id} />}
+                
         </div>
     )
 }

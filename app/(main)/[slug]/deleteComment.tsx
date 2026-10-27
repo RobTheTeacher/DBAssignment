@@ -2,7 +2,7 @@
 import { DeleteCommentAction } from "@/actions/delete-comment-action"
 import { useMutation } from "@tanstack/react-query"
 
-const DeleteComment = ({commentId}:{commentId: string}) => {
+const DeleteComment = ({commentId}:{commentId: number}) => {
 
 const {mutate} = useMutation({
     mutationFn: DeleteCommentAction
