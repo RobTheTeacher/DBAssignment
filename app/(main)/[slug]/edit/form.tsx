@@ -2,7 +2,7 @@
 import { EditPost } from '@/actions/edit-page-action'
 import { postSchema } from '@/actions/schemas'
 import ErrorMessage from '@/components/ErrorMessage'
-import { type Tables } from '@/lib/supabase/ogdatabase.types'
+import { type Tables } from '@/lib/supabase/database.types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
