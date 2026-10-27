@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-pacifika: #6E7D1F;
+  --color-saratoga: #525f11;
+  --color-sushi: #a7a939;
+  --color-champagne: #faf3cc;
+  --color-ivory: #fbffec;
+}
+
+.button {@apply cursor-pointer inline-block p-4 rounded-xl bg-pacifika text-ivory text-2xl font-bold border-2 border-pacifika hover:text-pacifika hover:bg-ivory}
+.button-secondary {@apply cursor-pointer inline-block p-4 rounded-xl bg-saratoga border-2 border-saratoga text-champagne text-2xl font-bold}
+.heading {@apply text-6xl text-center mb-8}
+
+.input {@apply border-saratoga border p-2 my-2 rounded-xl}
